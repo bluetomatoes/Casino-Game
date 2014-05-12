@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5589,        156]
+NotebookOptionsPosition[      5190,        136]
+NotebookOutlinePosition[      5546,        152]
+CellTagsIndexPosition[      5503,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"roll1", " ", "=", " ", 
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "6"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"roll2", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"roll3", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"roll3lose", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"count", " ", "=", "0"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{"i", "<", "100000"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"roll1", "<", "6"}], ",", 
+       RowBox[{"roll2", " ", "=", " ", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "6"}], "}"}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"roll1", " ", "!=", "6"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"roll2", "+", "roll1"}], " ", "\[GreaterEqual]", "8"}], 
+          ",", 
+          RowBox[{
+           RowBox[{"roll3", "=", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "20"}], "}"}], "]"}]}], ";", 
+           RowBox[{"count", "=", 
+            RowBox[{"count", "+", 
+             RowBox[{"roll3", "/", "2"}]}]}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"roll3", "=", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "6"}], "}"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"count", " ", "=", " ", 
+            RowBox[{"count", "-", "roll3"}]}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"count", " ", "=", " ", 
+         RowBox[{"count", "+", "5"}]}]}], "]"}], "\[IndentingNewLine]", 
+      RowBox[{"i", "++"}]}], ";"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Your overall winnings are \>\"", ",", "count"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{
+   "\"\<But since the entry fee is $3, your net gain or loss is \>\"", ",", 
+    RowBox[{"N", "[", 
+     RowBox[{"count", "-", 
+      RowBox[{"100", "*", "3"}]}], "]"}], ",", "\"\< dollars\>\""}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.591538130303162*^9, 3.591538384523868*^9}, {
+  3.59153843844098*^9, 3.591538899830243*^9}, {3.5915389664409924`*^9, 
+  3.591539256833009*^9}, {3.591539314721271*^9, 3.591539431860025*^9}, {
+  3.591539463783811*^9, 3.591539631292643*^9}, {3.59153971850207*^9, 
+  3.5915397582429028`*^9}, {3.591540265431254*^9, 3.591540268273549*^9}, {
+  3.591540328704843*^9, 3.59154057772565*^9}, {3.591540613729883*^9, 
+  3.591540633449367*^9}, {3.5915407546724367`*^9, 3.591540890281763*^9}, {
+  3.591540956735704*^9, 3.591540977013842*^9}, {3.591541074796126*^9, 
+  3.591541109616001*^9}, {3.5916274340282393`*^9, 3.591627661907216*^9}, {
+  3.5916277344553347`*^9, 3.5916277568168373`*^9}, {3.5916278000544653`*^9, 
+  3.591627869124551*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Your overall winnings are \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "200762"}]}],
+  SequenceForm["Your overall winnings are ", -200762],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5915409777147417`*^9, 3.5915409878396473`*^9}, {
+  3.591541110299138*^9, 3.591541118959752*^9}, {3.5916275233076887`*^9, 
+  3.591627548549*^9}, {3.5916275980980043`*^9, 3.591627608592545*^9}, {
+  3.591627642020041*^9, 3.591627653090027*^9}, {3.591627758441774*^9, 
+  3.591627888494597*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"But since the entry fee is $3, your net gain or loss is \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "201062.`"}], "\[InvisibleSpace]", "\<\" dollars\"\>"}],
+  SequenceForm[
+  "But since the entry fee is $3, your net gain or loss is ", -201062., 
+   " dollars"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.5915409777147417`*^9, 3.5915409878396473`*^9}, {
+  3.591541110299138*^9, 3.591541118959752*^9}, {3.5916275233076887`*^9, 
+  3.591627548549*^9}, {3.5916275980980043`*^9, 3.591627608592545*^9}, {
+  3.591627642020041*^9, 3.591627653090027*^9}, {3.591627758441774*^9, 
+  3.591627888495739*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 652},
+WindowMargins->{{Automatic, 182}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 3366, 81, 352, "Input"],
+Cell[CellGroupData[{
+Cell[3970, 107, 531, 10, 22, "Print"],
+Cell[4504, 119, 658, 13, 22, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
